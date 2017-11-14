@@ -1,0 +1,1879 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. 메시지 포맷 &mdash; test_doc 1.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="test_doc 1.0.1 documentation" href="index.html"/>
+        <link rel="next" title="7. 테스트용 시뮬레이터" href="simulator.html"/>
+        <link rel="prev" title="5. SDK" href="sdk.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> test_doc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Smart[Fleet] 플랫폼 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. 주요 구성요소 (Entity Architecture)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="procedure.html">3. 서비스 세부 절차</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">4. API 규격</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk.html">5. SDK</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. 메시지 포맷</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#device">6.1. Device 메시지 포맷</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#payload-types">6.1.1. Payload Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#microtrip">6.1.1.1. Microtrip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trip">6.1.1.2. Trip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#diagnostic-information">6.1.1.3. Diagnostic Information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#collision-warning-driving">6.1.1.4. Collision warning (Driving)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#collision-warning-paramsking">6.1.1.5. Collision warning (Paramsking)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#battery-warning">6.1.1.6. Battery Warning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unplugged-warning">6.1.1.7. Unplugged Warning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#turn-off-warning">6.1.1.8. Turn-off Warning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rpc">6.2. RPC 메시지 포맷</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vendor-specific-message">6.2.1. Vendor Specific Message</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#request">6.2.1.1. Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#response">6.2.1.2. Response</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#result">6.2.1.3. Result</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#device-activation">6.2.2. Device Activation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#device-activation-request">6.2.2.1. Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#device-activation-response">6.2.2.2. Response</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#device-activation-result">6.2.2.3. Result</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#firmware-update">6.2.3. Firmware Update</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">6.2.3.1. Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">6.2.3.2. Response</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#obd-reset">6.2.4. OBD Reset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">6.2.4.1. Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">6.2.4.2. Response</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">6.2.4.3. Result</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#device-serial-number-check">6.2.5. Device Serial Number Check</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">6.2.5.1. Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">6.2.5.2. Response</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">6.2.5.3. Result</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#clear-device-data">6.2.6. Clear Device Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id14">6.2.6.1. Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">6.2.6.2. Response</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">6.2.6.3. Result</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#firmware-update-chunk-based">6.2.7. Firmware Update (Chunk-based)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id17">6.2.7.1. Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">6.2.7.2. Response</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">6.2.7.3. Result</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#common-response-code-for-rpc-result">6.2.8. Common Response Code for RPC Result</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#code-class">6.2.8.1. Code Class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#successful-response-class">6.2.8.2. Successful Response Class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensor-error-response-class">6.2.8.3. Sensor Error Response Class</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">7. 테스트용 시뮬레이터</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">test_doc</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>6. 메시지 포맷</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/message.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>6. 메시지 포맷<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>표에 M/O는 Mandatory/Optional의 약자로, Mandatory는 필수로 포함해야 하는 데이터를 Optional은 필요에 따라 기입이 여부를 개발사에서 판단하시면 됩니다.</p>
+<div class="section" id="device">
+<h2>6.1. Device 메시지 포맷<a class="headerlink" href="#device" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="payload-types">
+<span id="id2"></span><h3>6.1.1. Payload Types<a class="headerlink" href="#payload-types" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="microtrip">
+<span id="microtrip-message-format"></span><h4>6.1.1.1. Microtrip<a class="headerlink" href="#microtrip" title="Permalink to this headline">¶</a></h4>
+<p>Microtrip 메세지는 차량이 운행을 시작한 후 설정된 주기에 따라 전송하는 차량 운행 상세 데이터입니다.  주기는 각 어플리케이션 마다 상이하므로, 아래의 값은 플랫폼에 전송하는 해당 시점에 데이터를 추출하여 기입합니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="8%" />
+<col width="5%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>tid</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip 고유 번호</td>
+</tr>
+<tr class="row-odd"><td>fc</td>
+<td>Int</td>
+<td>O</td>
+<td>연료소모량</td>
+</tr>
+<tr class="row-even"><td>lat</td>
+<td>Int</td>
+<td>M</td>
+<td>위도 (WGS84)</td>
+</tr>
+<tr class="row-odd"><td>lon</td>
+<td>Int</td>
+<td>M</td>
+<td>경도 (WGS84)</td>
+</tr>
+<tr class="row-even"><td>lc</td>
+<td>Int</td>
+<td>O</td>
+<td>측정 한 위치 값의 정확도</td>
+</tr>
+<tr class="row-odd"><td>clt</td>
+<td>Int</td>
+<td>M</td>
+<td>단말기 기준 수집 시간</td>
+</tr>
+<tr class="row-even"><td>cdit</td>
+<td>Int</td>
+<td>O</td>
+<td>Trip의 현재시점까지 주행거리</td>
+</tr>
+<tr class="row-odd"><td>rpm</td>
+<td>Int</td>
+<td>O</td>
+<td>rpm</td>
+</tr>
+<tr class="row-even"><td>sp</td>
+<td>Int</td>
+<td>O</td>
+<td>차량 속도</td>
+</tr>
+<tr class="row-odd"><td>em</td>
+<td>Int</td>
+<td>O</td>
+<td><p class="first">한 주기 동안 발생한 이벤트에 대해서 Hexa String으로 표기한다.
++&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
+| Bit |  Description    |
++=====+=================+
+| 0   |  급출발         |
++&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
+| 1   |  급좌회전       |
++&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
+| 2   |  급우회전       |
++&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
+| 3   |  급유턴         |
++&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
+| 4   |  급감속         |
++&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
+| 5   |  급가속         |
++&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
+| 6   |  급정지         |
++&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
+| 7   |  Reserved       |
++&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+</p>
+<p class="last">한 주기 동안 차량이 급유턴과 급가속을 동시에 진행한 경우에는 <strong>28</strong> 로 표현
++&#8212;&#8212;-+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+
+| Bit   | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
++=======+===+===+===+===+===+===+===+===+
+| Value | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 |
++&#8212;&#8212;-+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+&#8212;+</p>
+</td>
+</tr>
+<tr class="row-even"><td>el</td>
+<td>Int</td>
+<td>O</td>
+<td>엔진 부하</td>
+</tr>
+<tr class="row-odd"><td>xyz</td>
+<td>Int</td>
+<td>O</td>
+<td>가속도 X, Y 및 각속도 Y 값 (Delimeter는comma)</td>
+</tr>
+<tr class="row-even"><td>vv</td>
+<td>Int</td>
+<td>O</td>
+<td>배터리 전압 (시동 OFF 후 전압)</td>
+</tr>
+<tr class="row-odd"><td>tpos</td>
+<td>Int</td>
+<td>O</td>
+<td>엑셀 포지션 값</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;ts&quot;</span> <span class="p">:</span> <span class="mi">1505434907995</span><span class="p">,</span>
+      <span class="nt">&quot;ty&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;pld&quot;</span> <span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;tid&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="nt">&quot;fc&quot;</span> <span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+              <span class="nt">&quot;lon&quot;</span> <span class="p">:</span> <span class="mf">127.114513</span><span class="p">,</span>
+              <span class="nt">&quot;lat&quot;</span> <span class="p">:</span> <span class="mf">37.380241</span><span class="p">,</span>
+              <span class="nt">&quot;rpm&quot;</span> <span class="p">:</span> <span class="mi">323</span><span class="p">,</span>
+              <span class="nt">&quot;em&quot;</span> <span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
+              <span class="nt">&quot;el&quot;</span> <span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+              <span class="nt">&quot;xyz&quot;</span> <span class="p">:</span> <span class="s2">&quot;23123,49923,123&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;vv&quot;</span> <span class="p">:</span> <span class="s2">&quot;11.4&quot;</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="trip">
+<span id="trip-message-format"></span><h4>6.1.1.2. Trip<a class="headerlink" href="#trip" title="Permalink to this headline">¶</a></h4>
+<p>Trip Message는 차량이 운행이 종료된 후에 전달하는 메시지입니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="10%" />
+<col width="8%" />
+<col width="58%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+<th class="head">Note</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>tid</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip 고유 번호</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>stt</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip의 시작 날짜 및 시간</td>
+<td>UTC</td>
+</tr>
+<tr class="row-even"><td>edt</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip의 종료 날짜 및 시간</td>
+<td>UTC</td>
+</tr>
+<tr class="row-odd"><td>dis</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip의 주행거리</td>
+<td>Meter</td>
+</tr>
+<tr class="row-even"><td>tdis</td>
+<td>Int</td>
+<td>M</td>
+<td>차량의 총 주행거리</td>
+<td>Meter</td>
+</tr>
+<tr class="row-odd"><td>fc</td>
+<td>Int</td>
+<td>M</td>
+<td>연료소모량</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>stlat</td>
+<td>Int</td>
+<td>M</td>
+<td>운행 시작 좌표의 위도</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>stlon</td>
+<td>Int</td>
+<td>M</td>
+<td>운행 시작 좌표의 경도</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>edlat</td>
+<td>Int</td>
+<td>M</td>
+<td>운행 종료 좌표의 위도</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>edlon</td>
+<td>Int</td>
+<td>M</td>
+<td>운행 종료 좌표의 경도</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>ctp</td>
+<td>Int</td>
+<td>M</td>
+<td>부동액(냉각수) 평균온도</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>coe</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip의 탄소 배출량</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>fct</td>
+<td>Int</td>
+<td>M</td>
+<td>연료차단 상태의 운행시간</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>hsts</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip의 최고 속도</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>mesp</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip의 평균 속도</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>idt</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip의 공회전 시간</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>btv</td>
+<td>Int</td>
+<td>M</td>
+<td>배터리 전압(시동OFF후 전압)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>gnv</td>
+<td>Int</td>
+<td>M</td>
+<td>발전기 전압(주행중 최고 전압)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>wut</td>
+<td>Int</td>
+<td>M</td>
+<td>Trip의 웜업시간(주행전 시동 시간)</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>usm</td>
+<td>Int</td>
+<td>O</td>
+<td>BT가 연결된 휴대폰 번호</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>est</td>
+<td>Int</td>
+<td>O</td>
+<td>80~100km 운행 시간</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>fwv</td>
+<td>Int</td>
+<td>O</td>
+<td>펌웨어 버전</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>dtvt</td>
+<td>Int</td>
+<td>O</td>
+<td>주행시간</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;ty&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;ts&quot;</span> <span class="p">:</span> <span class="mi">1505434907995</span><span class="p">,</span>
+      <span class="nt">&quot;pld&quot;</span> <span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;tid&quot;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+              <span class="nt">&quot;stt&quot;</span> <span class="p">:</span> <span class="mi">1505433907995</span><span class="p">,</span>
+              <span class="nt">&quot;edt&quot;</span> <span class="p">:</span> <span class="mi">1505434907995</span><span class="p">,</span>
+              <span class="nt">&quot;dis&quot;</span> <span class="p">:</span> <span class="mi">101</span><span class="p">,</span>
+              <span class="nt">&quot;tdis&quot;</span> <span class="p">:</span> <span class="mi">16813</span><span class="p">,</span>
+              <span class="nt">&quot;fc&quot;</span> <span class="p">:</span> <span class="mi">83</span><span class="p">,</span>
+              <span class="nt">&quot;stlon&quot;</span> <span class="p">:</span> <span class="mf">127.114513</span><span class="p">,</span>
+              <span class="nt">&quot;stlat&quot;</span> <span class="p">:</span> <span class="mf">37.380241</span><span class="p">,</span>
+              <span class="nt">&quot;edlon&quot;</span> <span class="p">:</span> <span class="mf">126.114513</span><span class="p">,</span>
+              <span class="nt">&quot;edlat&quot;</span> <span class="p">:</span> <span class="mf">36.380241</span><span class="p">,</span>
+              <span class="nt">&quot;ctp&quot;</span> <span class="p">:</span> <span class="mi">48</span><span class="p">,</span>
+              <span class="nt">&quot;coe&quot;</span> <span class="p">:</span> <span class="mi">392</span><span class="p">,</span>
+              <span class="nt">&quot;fct&quot;</span> <span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+              <span class="nt">&quot;hsts&quot;</span> <span class="p">:</span> <span class="mi">121</span><span class="p">,</span>
+              <span class="nt">&quot;mesp&quot;</span> <span class="p">:</span> <span class="mi">63</span><span class="p">,</span>
+              <span class="nt">&quot;idt&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="nt">&quot;btv&quot;</span> <span class="p">:</span> <span class="mf">14.5</span><span class="p">,</span>
+              <span class="nt">&quot;gnv&quot;</span> <span class="p">:</span> <span class="mf">12.3</span><span class="p">,</span>
+              <span class="nt">&quot;wut&quot;</span> <span class="p">:</span> <span class="mi">181</span><span class="p">,</span>
+              <span class="nt">&quot;dtvt&quot;</span> <span class="p">:</span><span class="mi">2301</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="diagnostic-information">
+<h4>6.1.1.3. Diagnostic Information<a class="headerlink" href="#diagnostic-information" title="Permalink to this headline">¶</a></h4>
+<p>OBD에서 인지한 차량 진단 코드(DTC)를 전송하는 메시지를 정의합니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="15%" />
+<col width="10%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>tid</td>
+<td>Int</td>
+<td>O</td>
+<td>Trip 고유 번호(Not required)</td>
+</tr>
+<tr class="row-odd"><td>dtcc</td>
+<td>String</td>
+<td>M</td>
+<td>차량고장코드 (Delimeter Comma)</td>
+</tr>
+<tr class="row-even"><td>dtck</td>
+<td>Int</td>
+<td>M</td>
+<td>0=confirm 1=pending 2=permanent</td>
+</tr>
+<tr class="row-odd"><td>dtcs</td>
+<td>Int</td>
+<td>M</td>
+<td>DTC Code의 개수</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>OBD가 플랫폼에 DTC 코드를 전송하는 방식은 2가지</p>
+<ul class="last simple">
+<li>차량 주행이 시작한 후에 감지된 Diagnostic Information을 전송하는 방법</li>
+<li>플랫폼을 통해서 OBD에 DTC 코드 보고를 요청하는 RPC 방법</li>
+</ul>
+</div>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;tid&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;dtcc&quot;</span><span class="p">:</span> <span class="s2">&quot;AAA&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;dtck&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;dtcs&quot;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="collision-warning-driving">
+<h4>6.1.1.4. Collision warning (Driving)<a class="headerlink" href="#collision-warning-driving" title="Permalink to this headline">¶</a></h4>
+<p>운행 중 OBD가 감지한 차량 접촉 사고에 대한 위치 정보를 전달하는 메세지를 정의합니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="13%" />
+<col width="10%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>tid</td>
+<td>Int</td>
+<td>O</td>
+<td>Trip 고유 번호(Not required)</td>
+</tr>
+<tr class="row-odd"><td>dclat</td>
+<td>Int</td>
+<td>M</td>
+<td>위도</td>
+</tr>
+<tr class="row-even"><td>dclon</td>
+<td>Int</td>
+<td>M</td>
+<td>경도</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;tid&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;dclat&quot;</span> <span class="p">:</span> <span class="mf">37.380241</span><span class="p">,</span>
+      <span class="nt">&quot;dclon&quot;</span> <span class="p">:</span> <span class="mf">127.114513</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="collision-warning-paramsking">
+<h4>6.1.1.5. Collision warning (Paramsking)<a class="headerlink" href="#collision-warning-paramsking" title="Permalink to this headline">¶</a></h4>
+<p>주차 중 OBD가 감지한 차량 접촉 사고에 대한 위치 정보를 전달하는 메세지를 정의합니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="17%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>plat</td>
+<td>Int</td>
+<td>M</td>
+<td>위도</td>
+</tr>
+<tr class="row-odd"><td>plon</td>
+<td>Int</td>
+<td>M</td>
+<td>경도</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;plat&quot;</span> <span class="p">:</span> <span class="mf">37.380241</span><span class="p">,</span>
+      <span class="nt">&quot;plon&quot;</span> <span class="p">:</span> <span class="mf">127.114513</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="battery-warning">
+<h4>6.1.1.6. Battery Warning<a class="headerlink" href="#battery-warning" title="Permalink to this headline">¶</a></h4>
+<p>차량 배터리 소모에 대한 위험 알림 메시지를 정의합니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="21%" />
+<col width="17%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>wbv</td>
+<td>Int</td>
+<td>M</td>
+<td>배터리 전압</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;wbv&quot;</span> <span class="p">:</span> <span class="mi">13</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unplugged-warning">
+<h4>6.1.1.7. Unplugged Warning<a class="headerlink" href="#unplugged-warning" title="Permalink to this headline">¶</a></h4>
+<p>OBD가 차량으로부터 탈착되는 이벤트에 대한 알림 메시지를 정의합니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="17%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>unpt</td>
+<td>Int</td>
+<td>M</td>
+<td>탈착 시간</td>
+</tr>
+<tr class="row-odd"><td>pt</td>
+<td>Int</td>
+<td>M</td>
+<td>부착 시간</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;unpt&quot;</span><span class="p">:</span> <span class="mi">1505433907995</span><span class="p">,</span>
+      <span class="nt">&quot;pt&quot;</span><span class="p">:</span> <span class="mi">1505434907995</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="turn-off-warning">
+<h4>6.1.1.8. Turn-off Warning<a class="headerlink" href="#turn-off-warning" title="Permalink to this headline">¶</a></h4>
+<p>OBD가 종료된 경우, 종료 이전에 종료에 대한 이유를 플랫폼에 전달하기 위한 알림 매시지를 정의합니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="24%" />
+<col width="15%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rs</td>
+<td>String</td>
+<td>M</td>
+<td>단말 종료 원인</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;rs&quot;</span><span class="p">:</span><span class="s2">&quot;string&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rpc">
+<span id="rpc-message-format"></span><h2>6.2. RPC 메시지 포맷<a class="headerlink" href="#rpc" title="Permalink to this headline">¶</a></h2>
+<p>OBD 단말을 제어하기 위한 RPC Message Type을 명세합니다. 기술되지 않는 제어는 단말과 어플리케이션 상호 간에만 규약 되어 있다면, Vendor Specific Message를 사용합니다.</p>
+<div class="section" id="vendor-specific-message">
+<h3>6.2.1. Vendor Specific Message<a class="headerlink" href="#vendor-specific-message" title="Permalink to this headline">¶</a></h3>
+<p>각 단말 업체에서 별도로 관리하는 제어 요청 메시지이며, 다른 제어 메시지도 본 포맷을 확장하여 명시됩니다.</p>
+<div class="section" id="request">
+<h4>6.2.1.1. Request<a class="headerlink" href="#request" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="8%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>method</td>
+<td>String</td>
+<td>M</td>
+<td>원격 제어하고자 하는 기능에 대해서 명세</td>
+</tr>
+<tr class="row-odd"><td>params</td>
+<td>String</td>
+<td>M</td>
+<td>기능에 대한 파라미터를 명세</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="response">
+<h4>6.2.1.2. Response<a class="headerlink" href="#response" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode&nbsp;</a>에
+정의된 제어
+결과 추가</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="result">
+<h4>6.2.1.3. Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode</a>&nbsp;에
+정의된 제어
+결과 추가</td>
+</tr>
+<tr class="row-odd"><td>addInfo</td>
+<td>String</td>
+<td>O</td>
+<td>결과 값에 따른
+추가 정보 명세</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="device-activation">
+<h3>6.2.2. Device Activation<a class="headerlink" href="#device-activation" title="Permalink to this headline">¶</a></h3>
+<p>차량용 센서를 차량에 부착한 후 활성화하기 위해 필요한 RPC 메시지를 명세합니다.</p>
+<div class="section" id="device-activation-request">
+<span id="id3"></span><h4>6.2.2.1. Request<a class="headerlink" href="#device-activation-request" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="7%" />
+<col width="72%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>method</td>
+<td>String</td>
+<td>M</td>
+<td>activationReq&nbsp;로 명세</td>
+</tr>
+<tr class="row-odd"><td>params</td>
+<td>String</td>
+<td>M</td>
+<td><table border="1" class="first last docutils">
+<colgroup>
+<col width="11%" />
+<col width="17%" />
+<col width="11%" />
+<col width="61%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Vid</td>
+<td>String</td>
+<td>M</td>
+<td>차량 식별 번호</td>
+</tr>
+<tr class="row-odd"><td>upp</td>
+<td>Int</td>
+<td>M</td>
+<td>Microtrip 업로드 주가 (초)</td>
+</tr>
+<tr class="row-even"><td>Elt</td>
+<td>Int</td>
+<td>M</td>
+<td>배기량 정보</td>
+</tr>
+<tr class="row-odd"><td>Fut</td>
+<td>Int</td>
+<td>M</td>
+<td><ol class="first last arabic simple">
+<li>가솔린</li>
+<li>디젤</li>
+<li>LPG</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td>Mty</td>
+<td>String</td>
+<td>M</td>
+<td><ol class="first last arabic simple">
+<li>Automatic</li>
+<li>Manual</li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td>cyl</td>
+<td>Int</td>
+<td>O</td>
+<td>실린더 정보</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;method&quot;</span> <span class="p">:</span> <span class="s2">&quot;activationReq&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;params&quot;</span> <span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;vid&quot;</span> <span class="p">:</span> <span class="s2">&quot;25나0660&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;upp&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="nt">&quot;elt&quot;</span> <span class="p">:</span> <span class="mi">1999</span><span class="p">,</span>
+              <span class="nt">&quot;fut&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="nt">&quot;mty&quot;</span> <span class="p">:</span> <span class="s2">&quot;Automatic&quot;</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="device-activation-response">
+<span id="id4"></span><h4>6.2.2.2. Response<a class="headerlink" href="#device-activation-response" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode</a>&nbsp;에
+정의된 제어
+결과 추가</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="device-activation-result">
+<span id="id5"></span><h4>6.2.2.3. Result<a class="headerlink" href="#device-activation-result" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode</a>&nbsp;에 정의된 제어 결과 추가</td>
+</tr>
+<tr class="row-odd"><td>addInfo</td>
+<td>String</td>
+<td>M</td>
+<td><table border="1" class="first last docutils">
+<colgroup>
+<col width="23%" />
+<col width="21%" />
+<col width="12%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Decsription</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>addInfo</td>
+<td>String</td>
+<td>M</td>
+<td>차량 식별 번호</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+  <span class="nt">&quot;addInfo&quot;</span> <span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;vid&quot;</span> <span class="p">:</span> <span class="s2">&quot;25나0660&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="firmware-update">
+<h3>6.2.3. Firmware Update<a class="headerlink" href="#firmware-update" title="Permalink to this headline">¶</a></h3>
+<p>차량용 OBD의 펌웨어 업데이트를 위한 RPC 메시지를 명세합니다.</p>
+<div class="section" id="id6">
+<h4>6.2.3.1. Request<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="6%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>method</td>
+<td>String</td>
+<td>M</td>
+<td>fwupdate&nbsp;로 명세</td>
+</tr>
+<tr class="row-odd"><td>params</td>
+<td>String</td>
+<td>M</td>
+<td><table border="1" class="first last docutils">
+<colgroup>
+<col width="10%" />
+<col width="16%" />
+<col width="10%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Pkv</td>
+<td>String</td>
+<td>M</td>
+<td>F/W 패키지 버전</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>String</td>
+<td>M</td>
+<td>F/W 패키지가 저장된 사이트 주소</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;method&quot;</span> <span class="p">:</span> <span class="s2">&quot;fwupdate&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;params&quot;</span> <span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;pkv&quot;</span> <span class="p">:</span> <span class="s2">&quot;1.0.1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span> <span class="p">:</span> <span class="s2">&quot;ftp://smartfleet.sktelecom.com:10011&quot;</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h4>6.2.3.2. Response<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode&nbsp;</a>에
+정의된 제어
+결과 추가</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="obd-reset">
+<h3>6.2.4. OBD Reset<a class="headerlink" href="#obd-reset" title="Permalink to this headline">¶</a></h3>
+<p>차량용 OBD의 재시작을 위한 RPC 메시지</p>
+<div class="section" id="id8">
+<h4>6.2.4.1. Request<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="14%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>method</td>
+<td>String</td>
+<td>M</td>
+<td>reset&nbsp;로 명세</td>
+</tr>
+<tr class="row-odd"><td>params</td>
+<td>String</td>
+<td>M</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;method&quot;</span> <span class="p">:</span> <span class="s2">&quot;reset&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;params&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>6.2.4.2. Response<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode&nbsp;</a>에
+정의된 제어
+결과 추가</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h4>6.2.4.3. Result<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode</a>&nbsp;에
+정의된 제어
+결과 추가</td>
+</tr>
+<tr class="row-odd"><td>addInfo</td>
+<td>String</td>
+<td>O</td>
+<td>결과 값에 따른
+추가 정보 명세</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="device-serial-number-check">
+<h3>6.2.5. Device Serial Number Check<a class="headerlink" href="#device-serial-number-check" title="Permalink to this headline">¶</a></h3>
+<p>차량용 OBD의 시리얼 번호 확인용 RPC 메시지</p>
+<div class="section" id="id11">
+<h4>6.2.5.1. Request<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="14%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>method</td>
+<td>String</td>
+<td>M</td>
+<td>serial&nbsp;로 명세</td>
+</tr>
+<tr class="row-odd"><td>params</td>
+<td>String</td>
+<td>M</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;method&quot;</span> <span class="p">:</span> <span class="s2">&quot;serial&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;params&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h4>6.2.5.2. Response<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode&nbsp;</a>에
+정의된 제어
+결과 추가</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h4>6.2.5.3. Result<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode</a>&nbsp;에 정의된 제어 결과 추가</td>
+</tr>
+<tr class="row-odd"><td>addInfo</td>
+<td>String</td>
+<td>M</td>
+<td><table border="1" class="first last docutils">
+<colgroup>
+<col width="23%" />
+<col width="21%" />
+<col width="12%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Decsription</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>sn</td>
+<td>String</td>
+<td>M</td>
+<td>단말 시리얼 번호</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+  <span class="nt">&quot;addInfo&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;sn&quot;</span> <span class="p">:</span> <span class="s2">&quot;70d71b00-71c9-11e7-b3e0-e5673983c7b9&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="clear-device-data">
+<h3>6.2.6. Clear Device Data<a class="headerlink" href="#clear-device-data" title="Permalink to this headline">¶</a></h3>
+<p>차량용 OBD 데이터 삭제</p>
+<div class="section" id="id14">
+<h4>6.2.6.1. Request<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="13%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>method</td>
+<td>String</td>
+<td>M</td>
+<td>cleardata&nbsp;로 명세</td>
+</tr>
+<tr class="row-odd"><td>params</td>
+<td>String</td>
+<td>M</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;method&quot;</span> <span class="p">:</span> <span class="s2">&quot;cleardata&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;params&quot;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h4>6.2.6.2. Response<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode&nbsp;</a>에
+정의된 제어
+결과 추가</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h4>6.2.6.3. Result<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode</a>&nbsp;에
+정의된 제어
+결과 추가</td>
+</tr>
+<tr class="row-odd"><td>addInfo</td>
+<td>String</td>
+<td>O</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="firmware-update-chunk-based">
+<h3>6.2.7. Firmware Update (Chunk-based)<a class="headerlink" href="#firmware-update-chunk-based" title="Permalink to this headline">¶</a></h3>
+<p>Chunk 기반으로 차량용 OBD의 펌웨어 업데이트를 위한 RPC 메시지를 명세합니다.</p>
+<div class="section" id="id17">
+<h4>6.2.7.1. Request<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="7%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>method</td>
+<td>String</td>
+<td>M</td>
+<td>fwupchunk&nbsp;로 명세</td>
+</tr>
+<tr class="row-odd"><td>params</td>
+<td>String</td>
+<td>M</td>
+<td><table border="1" class="first last docutils">
+<colgroup>
+<col width="13%" />
+<col width="21%" />
+<col width="13%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Tsz</td>
+<td>Int</td>
+<td>M</td>
+<td>F/W 전체 용량</td>
+</tr>
+<tr class="row-odd"><td>Csz</td>
+<td>Int</td>
+<td>M</td>
+<td>Chunk 사이즈</td>
+</tr>
+<tr class="row-even"><td>Idx</td>
+<td>Int</td>
+<td>M</td>
+<td>Chunk 데이터 인덱스</td>
+</tr>
+<tr class="row-odd"><td>pyd</td>
+<td>String</td>
+<td>M</td>
+<td>F/W Chunk 데이터</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+      <span class="nt">&quot;method&quot;</span> <span class="p">:</span> <span class="s2">&quot;fwupchunk&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;params&quot;</span> <span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;tsz&quot;</span> <span class="p">:</span> <span class="mi">4932321</span><span class="p">,</span>
+              <span class="nt">&quot;csz&quot;</span> <span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+              <span class="nt">&quot;idx&quot;</span> <span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+              <span class="nt">&quot;pyl&quot;</span> <span class="p">:</span> <span class="s2">&quot;83a27473cf0000015e82e9b55ba2747902a3706c64&quot;</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id18">
+<h4>6.2.7.2. Response<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode&nbsp;</a>에
+정의된 제어
+결과 추가</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id19">
+<h4>6.2.7.3. Result<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">M/O</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>result</td>
+<td>String</td>
+<td>M</td>
+<td><a class="reference external" href="#common-response-code-for-rpc-result">resultCode</a>&nbsp;에
+정의된 제어
+결과 추가</td>
+</tr>
+<tr class="row-odd"><td>addInfo</td>
+<td>String</td>
+<td>O</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><span class="underline">Example Code</span></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;result&quot;</span> <span class="p">:</span> <span class="mi">2000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="common-response-code-for-rpc-result">
+<h3>6.2.8. Common Response Code for RPC Result<a class="headerlink" href="#common-response-code-for-rpc-result" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="code-class">
+<h4>6.2.8.1. Code Class<a class="headerlink" href="#code-class" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="8%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Status Class</th>
+<th class="head">Code</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Success</td>
+<td>2XXX</td>
+<td>RPC 결과가 정상적으로 동작하는 경우</td>
+</tr>
+<tr class="row-odd"><td>Sensor Error</td>
+<td>4XXX</td>
+<td>RPC 결과를 수신한 단말이 비정상적으로 동작한 경우</td>
+</tr>
+<tr class="row-even"><td>Platform Error</td>
+<td>5XXX</td>
+<td>RPC 요청에 대해서 플랫폼이 비정상적으로 동작한 경우</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="successful-response-class">
+<h4>6.2.8.2. Successful Response Class<a class="headerlink" href="#successful-response-class" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2000</td>
+<td>RPC 정상적 수행</td>
+</tr>
+<tr class="row-odd"><td>2001</td>
+<td>RPC 메시지 정상적으로 수신</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sensor-error-response-class">
+<h4>6.2.8.3. Sensor Error Response Class<a class="headerlink" href="#sensor-error-response-class" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>4000</td>
+<td>디바이스가 수행할 수 없는 RPC 메시지 수신</td>
+</tr>
+<tr class="row-odd"><td>4001</td>
+<td>잘못된 RPC 파라미터 수신</td>
+</tr>
+<tr class="row-even"><td>4002</td>
+<td>접근 불가</td>
+</tr>
+<tr class="row-odd"><td>4003</td>
+<td>동일한 RPC 중복 수신</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simulator.html" class="btn btn-neutral float-right" title="7. 테스트용 시뮬레이터" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sdk.html" class="btn btn-neutral" title="5. SDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Test.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

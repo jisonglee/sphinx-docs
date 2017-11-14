@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Smart[Fleet] 파트너 구축 가이드 &mdash; test_doc 1.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="test_doc 1.0.1 documentation" href="#"/>
+        <link rel="next" title="1. Smart[Fleet] 플랫폼 소개" href="introduction.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> test_doc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Smart[Fleet] 플랫폼 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. 주요 구성요소 (Entity Architecture)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="procedure.html">3. 서비스 세부 절차</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">4. API 규격</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sdk.html">5. SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="message.html">6. 메시지 포맷</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">7. 테스트용 시뮬레이터</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">test_doc</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Smart[Fleet] 파트너 구축 가이드</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="smart-fleet">
+<h1>Smart[Fleet] 파트너 구축 가이드<a class="headerlink" href="#smart-fleet" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Smart[Fleet] 플랫폼 소개</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id1">1.1. 주요 특징</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#id2">1.2. 제공 주요 기능</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">2. 주요 구성요소 (Entity Architecture)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#basic-entity">2.1. 기본 구성요소 (Basic Entity)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#id1">2.2. 부가 구성요소</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="procedure.html">3. 서비스 세부 절차</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="procedure.html#id2">3.1. 전체 세부 절차</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure.html#id3">3.2. 파트너별 이용 안내</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#id4">3.2.1. 커넥티드카 서비스 사업자</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#device">3.2.2. Device 개발자</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#app">3.2.3. App 개발자</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="procedure.html#entity">3.3. 구성요소(Entity) 등록</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#service-registration">3.3.1. 서비스 등록 (Service Registration)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#company-partner-registration">3.3.2. 회사(협력사) 등록 (Company (Partner) Registration)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#vehicle-registration">3.3.3. 차량 등록 (Vehicle Registration)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#sensor-registration">3.3.4. 센서 등록 (Sensor Registration)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#director-registration">3.3.5. 디렉터 등록 (Director Registration)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#driver-registration">3.3.6. 운전자 등록 (Driver Registration)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#delegated-company-registration">3.3.7. 위임 회사 등록 (Delegated Company Registration)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#delegated-director-registration">3.3.8. 위임 디렉터 등록 (Delegated Director Registration)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#delegated-driver-registration">3.3.9. 위임 운전자 등록 (Delegated Driver Registration)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="procedure.html#id63">3.4. Device 연동 절차</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#device-connection">3.4.1. Device Connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#device-rpc">3.4.2. Device RPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#device-activation">3.4.3. Device Activation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="procedure.html#obd-device-procedure">3.4.4. OBD Device Procedure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">4. API 규격</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#rest-api">4.1. REST API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#entity-model">4.2. Entity Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sdk.html">5. SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sdk.html#embedded-c">5.1. Embedded C</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdk.html#source">5.1.1. 소스 (Source) &amp; 도구</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk.html#id1">5.1.2. 사용 방법 및 제공 라이브러리</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdk.html#android">5.2. Android</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdk.html#id2">5.2.1. 소스 (Source) &amp; 도구</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk.html#id3">5.2.2. 사용 방법 및 제공 라이브러리</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdk.html#object-c-ios">5.3. Object-C (iOS)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdk.html#id4">5.3.1. 소스 (Source) &amp; 도구</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk.html#id5">5.3.2. 사용 방법 및 제공 라이브러리</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdk.html#java">5.4. JAVA</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sdk.html#id6">5.4.1. 소스 (Source) &amp; 도구</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sdk.html#id7">5.4.2. 사용 방법 및 제공 라이브러리</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="message.html">6. 메시지 포맷</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="message.html#device">6.1. Device 메시지 포맷</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.html#payload-types">6.1.1. Payload Types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#rpc">6.2. RPC 메시지 포맷</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.html#vendor-specific-message">6.2.1. Vendor Specific Message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#device-activation">6.2.2. Device Activation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#firmware-update">6.2.3. Firmware Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#obd-reset">6.2.4. OBD Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#device-serial-number-check">6.2.5. Device Serial Number Check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#clear-device-data">6.2.6. Clear Device Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#firmware-update-chunk-based">6.2.7. Firmware Update (Chunk-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#common-response-code-for-rpc-result">6.2.8. Common Response Code for RPC Result</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulator.html">7. 테스트용 시뮬레이터</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#smart-fleet-device-simulator">7.1. Smart[Fleet] Device Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulator.html#smart-fleet-web-application-simulator">7.2. Smart[Fleet] Web Application Simulator</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="introduction.html" class="btn btn-neutral float-right" title="1. Smart[Fleet] 플랫폼 소개" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Test.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
