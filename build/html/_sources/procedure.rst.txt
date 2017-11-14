@@ -60,7 +60,9 @@ Device개발 협력사는 Smart[Fleet] 플랫폼과 Device를 연결하기 위�
 4. 차량 내 센서가 Smart[Fleet] 플랫폼으로 센싱한 정보를 정상적으로 전송하기 위해서는 Smart[Fleet] 플랫폼에서 정의한 단말기 메시지 포맷을 맞추어야 합니다. 단말기 매시지 포맷 규격은 :ref:`6. 단말기 메시지 포맷 <message-format>` 내용을 참고하시기 바랍니다.
 5. 어플리케이션에서 센서로부터 특정 데이터를 요구하거나, 특정 행동을 요청할 경우에는 RPC를 사용합니다. RPC 이용 절차는 `3.4.2. Sensor RPC <#device-rpc>`__ 내용을 참고하시기 바랍니다.
 6. 마지막으로 SDK를 참고하여 개발을 하실 수 있습니다.
+
 ..
+
   ODB2나 ADAS와 같이 센서가 부착된 디바이스를 개발하는 개발자는 :ref:`5.1. Embedded-C SDK <embedded-c-sdk>` 를 참고하시고, 스마트폰의 GPS를 사용하여 개발하는 개발자는 :ref:`5.2 Android SDK <android-sdk>` , :ref:`5.3. Object-C(iOS) SDK <object-c-sdk>` 내용을 참고하시기 바랍니다.
 
 App 개발자
@@ -83,7 +85,7 @@ Web App을 개발하는 개발자는 `7.2. Web Application Simulator <web-applic
 .. _service-registration-portal:
 
 Smart[Fleet] 포털을 통한 등록
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Smart[Fleet] 메인의 ‘서비스 등록’ 버튼을 통해 등록 신청 페이지로 이동합니다.
 
