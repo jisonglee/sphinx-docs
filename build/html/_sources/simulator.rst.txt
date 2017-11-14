@@ -38,11 +38,12 @@ Smart[Fleet] Device Simulator는 디바이스/센서 역할을 대행해주는 O
 
 .. _Repository Issue: https://github.com/skt-smartfleet/device-simulator/issues
 
+.. _web-application-simulator:
 
 Smart[Fleet] Web Application Simulator
 ---------------------------------------
 
-Smart[Fleet] Web Application Simulator는 OBD 운행 데이터 확인 및 RPC 요청 기능을 구현한 웹 애플리케이션 시뮬레이터입니다.  해당 시뮬레이터에 대한 추가 사용 설명과 프로그램 다운로드는 아래 사이트를 방문하시기 바랍니다.  
+Smart[Fleet] Web Application Simulator는 OBD 운행 데이터 확인 및 RPC 요청 기능을 구현한 웹 애플리케이션 시뮬레이터입니다.  해당 시뮬레이터에 대한 추가 사용 설명과 프로그램 다운로드는 아래 사이트를 방문하시기 바랍니다.
 
 - Smart[Fleet] Web Application Simulator : https://github.com/skt-smartfleet/simpleweb /*스타일*/
 
@@ -56,4 +57,4 @@ Smart[Fleet] Web Application 페이지는 4개의 View로 구성되며 10초마�
 * 게이지 : 선택된 차량의 운행 정보를 각 게이지 차트로 나타냅니다.
 * 콘솔 로그 : RPC 및 운행 정보를 JSON 형태로 확인할 수 있습니다. 로그는 시간 역순으로 나열됩니다.
 
-하단에는 RPC 버튼이 있어서, 해당 버튼을 클릭하면 RPC 요청을 전송합니다. 해당 요청에 대한 결과는 페이지 상단에 토스트 메세지로 올라옵니다. 
+하단에는 RPC 버튼이 있어서, 해당 버튼을 클릭하면 RPC 요청을 전송합니다. 해당 요청에 대한 결과는 페이지 상단에 토스트 메세지로 올라옵니다.

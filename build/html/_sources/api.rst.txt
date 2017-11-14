@@ -1,3 +1,5 @@
+.. _api-specification:
+
 API 규격
 ========
 
@@ -182,7 +184,7 @@ Smart[Fleet] 플랫폼의 다음과 같은 REST API를 제공합니다. 상세�
 
 
 
-Entity Model 
+Entity Model
 -------------
 
 REST API에서는 다음과 같은 Entity들이 정의되어 있으며, 세부 데이터 모델 내용은 `Smart[Fleet] REST API Web Document <https://app.swaggerhub.com/apis/tremoteye/tremoteyeapi/1.0.0>`__ 내용을 참고하시기 바랍니다.
@@ -216,6 +218,3 @@ REST API에서는 다음과 같은 Entity들이 정의되어 있으며, 세부 �
 -  TextPageLink
 
 -  TimePageLink
-
-
-
