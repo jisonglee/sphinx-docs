@@ -166,10 +166,10 @@ API를 활용한 등록
 ''''''''''''''''''
 
 +------------+--------------------------------------+
-| **POST**   |`/api/tre/v1/company <https://app.swag|
-|            |gerhub.com/apis/tremoteye/tremoteyeap |
-|            |i/1.0.0#/Company/post_api_tre_v1_comp |
-|            |any>`__                               |
+| **POST**   | `/api/tre/v1/company <https://app.sw |
+|            | aggerhub.com/apis/tremoteye/tremotey |
+|            | eapi/1.0.0#/Company/post_api_tre_v1_ |
+|            | company>`__                          |
 +------------+--------------------------------------+
 
 -  Header
