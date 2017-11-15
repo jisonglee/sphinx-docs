@@ -12,7 +12,7 @@ Smart[Fleet] Device Simulator
 
 Smart[Fleet] Device Simulator는 디바이스/센서 역할을 대행해주는 OBD 운행 데이터 및 RPC 송수신 시뮬레이터 입니다.  해당 시뮬레이터에 대한 추가 사용 설명과 프로그램 다운로드는 아래 사이트를 방문하시기 바랍니다.
 
-- Smart[Fleet] Device Simulator : https://github.com/skt-smartfleet/device-simulator /*스타일*/
+- Smart[Fleet] Device Simulator : https://github.com/skt-smartfleet/device-simulator
 
 .. image:: ../images/simulator/7_1.png
 
@@ -45,7 +45,7 @@ Smart[Fleet] Web Application Simulator
 
 Smart[Fleet] Web Application Simulator는 OBD 운행 데이터 확인 및 RPC 요청 기능을 구현한 웹 애플리케이션 시뮬레이터입니다.  해당 시뮬레이터에 대한 추가 사용 설명과 프로그램 다운로드는 아래 사이트를 방문하시기 바랍니다.
 
-- Smart[Fleet] Web Application Simulator : https://github.com/skt-smartfleet/simpleweb /*스타일*/
+- Smart[Fleet] Web Application Simulator : https://github.com/skt-smartfleet/simpleweb
 
 .. image:: ../images/simulator/7_2.png
 

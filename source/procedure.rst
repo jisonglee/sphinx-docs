@@ -74,7 +74,7 @@ Smart[Fleet] 에서 제공하는 포털을 사용하지 않을 경우 고객사�
 2. REST-API 규격을 이용하여 사용하여 Smart[Fleet] platform 에 데이터를 만들고 조회할 수 있습니다. REST API 규격에 대해서는 :ref:`4. API 규격 <api-specification>` 내용을 참고하시기 바랍니다.
 3. 차량에 부착된 센서들로부터 전송되는 자동차 운행과 관련된 정보의 메시지 포맷은 :ref:`6. 단말기 메시지 포맷 <message-format>` 내용을 참고하시기 바랍니다.
 
-Web App을 개발하는 개발자는 `7.2. Web Application Simulator <web-application-simulator>` 내용을 참고하시기 바랍니다.
+Web App을 개발하는 개발자는 :ref:`7.2. Web Application Simulator <web-application-simulator>` 내용을 참고하시기 바랍니다.
 
 구성요소(Entity) 등록
 ------------------------
@@ -166,10 +166,10 @@ API를 활용한 등록
 ''''''''''''''''''
 
 +-----------------------------------+---------------------------------------+
-| **POST**                          | /api/tre/v1/company <https://app.swa  |
-|                                   | ggerhub.com/apis/tremoteye/tremoteyea |
-|                          	    | pi/1.0.0#/Company/post_api_tre_v1_com |
-|                                   | pany>`__                              |
+| **POST**                          | /api/tre/v1/company <https://app.swag |
+|                                   | gerhub.com/apis/tremoteye/tremoteyeap |
+|                          	    | i/1.0.0#/Company/post_api_tre_v1_comp |
+|                                   | any>`__                               |
 +-----------------------------------+---------------------------------------+
 
 -  Header
@@ -1023,13 +1023,13 @@ API를 활용한 등록
 위임 후보 회사 등록 API
 '''''''''''''''''''''''
 
-+-----------------------------------+-------------------------------------------+
-| **POST**                          | `/api/tre/v1/company/{companyId}/r        |
-|                                   | elation/company <https://app.swaggerhub   |
-|                                   | .com/apis/tremoteye/tremoteyeapi/1.0.0#/  |
-|                                   | Relation/post_api_tre_v1_company__company |
-|                                   | Id__relation_company>`__                  |
-+-----------------------------------+-------------------------------------------+
++-----------------------------------+------------------------------------------+
+| **POST**                          | `/api/tre/v1/company/{companyId}/relatio |
+|                                   | n/company <https://app.swaggerhub.com/ap |
+|                                   | is/tremoteye/tremoteyeapi/1.0.0#/Relatio |
+|                                   | n/post_api_tre_v1_company__companyId__re |
+|                                   | lation_company>`__                       |
++-----------------------------------+------------------------------------------+
 
 -  Header
 
@@ -1098,13 +1098,13 @@ API를 활용한 등록
 위임 후보 회사에 차량 위임 API
 ''''''''''''''''''''''''''''''
 
-+-----------------------------------+-------------------------------------------+
-| **POST**                          | `/api/tre/v1/director/{directorId}        |
-|                                   | /relation/vehicle <https://app.swaggerhub |
-|                                   | .com/apis/tremoteye/tremoteyeapi/         |
-|                                   | 1.0.0#/Relation/post_api_tre_v1_cicle>`__ |
-|                                   |                                           |
-+-----------------------------------+-------------------------------------------+
++-----------------------------------+------------------------------------+
+| **POST**                          | `/api/tre/v1/director/{directorId} |
+|                                   | /relation/vehicle <https://app.swa |
+|                                   | ggerhub.com/apis/tremoteye/tremote |
+|                                   | yeapi/1.0.0#/Relation/post_api_tre |
+|                                   | _v1_cicle>`__                      |
++-----------------------------------+------------------------------------+
 
 -  Header
 
@@ -1483,7 +1483,7 @@ Procedure
 +-----------------+-----------------------------------------------------+
 | **Topic**       | v1/sensors/me/rpc/response/{Request-ID}             |
 +-----------------+-----------------+-----------------------------------+
-| **메시지 포맷** | :ref:`Response <verdor-specific-msg-response>` 참조 |
+| **메시지 포맷** | :ref:`Response <vendor-specific-msg-response>` 참조 |
 +-----------------+-----------------+-----------------------------------+
 
 5. 플랫폼은 RPC 요청 수신 결과 메세지를 포워딩하여 Application에 상기 4번의 Response 형태로 응답합니다.
@@ -1493,7 +1493,7 @@ Procedure
 +-----------------+-----------------------------------------------------+
 | **Topic**       | v1/sensors/me/rpc/result/{Request-ID}               |
 +-----------------+-----------------+-----------------------------------+
-| **메시지 포맷** | :ref:`Result <verdor-specific-msg-result>` 참조     |
+| **메시지 포맷** | :ref:`Result <vendor-specific-msg-result>` 참조     |
 +-----------------+-----------------+-----------------------------------+
 
 7. 플랫폼은 상기 6번 과정의 Attribute가 Update 된 경우에 해당 결과를 그대로 고객사의 application에 푸시 형태로 제공합니다. 이 때 주소는 Prestep에서 정의한 HTTP Server 주소를 활용합니다.
