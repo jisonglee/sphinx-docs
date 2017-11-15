@@ -105,12 +105,12 @@ API를 활용한 등록
 로그인 요청 정보 API
 ''''''''''''''''''''
 
-+-----------------------------------+------------------------------------+
-| **POST**                          | `/api/auth/login <https://app.swag |
-|                                   | gerbub.com/apis/tremoteye/tremote  |
-|                                   | yeapi/1.0.0#/Auth/post_api_auth_l  |
-|                                   | ogin>`__                           |
-+-----------------------------------+------------------------------------+
++------------+------------------------------------+
+| **POST**   | `/api/auth/login <https://app.swag |
+|            | gerbub.com/apis/tremoteye/tremote  |
+|            | yeapi/1.0.0#/Auth/post_api_auth_l  |
+|            | ogin>`__                           |
++------------+------------------------------------+
 
 -  Header
 
@@ -165,12 +165,12 @@ API를 활용한 등록
 회사 정보 등록 API
 ''''''''''''''''''
 
-+-----------------------------------+--------------------------------------+
-| **POST**                          |`/api/tre/v1/company <https://app.swag|
-|                                   |gerhub.com/apis/tremoteye/tremoteyeap |
-|                          	    |i/1.0.0#/Company/post_api_tre_v1_comp |
-|                                   |any>`__                               |
-+-----------------------------------+--------------------------------------+
++------------+--------------------------------------+
+| **POST**   |`/api/tre/v1/company <https://app.swag|
+|            |gerhub.com/apis/tremoteye/tremoteyeap |
+|            |i/1.0.0#/Company/post_api_tre_v1_comp |
+|            |any>`__                               |
++------------+--------------------------------------+
 
 -  Header
 
@@ -313,12 +313,12 @@ API를 활용한 등록
 로그인 요청 정보 API
 ''''''''''''''''''''
 
-+-----------------------------------+----------------------------------------+
-| **POST**                          | `/api/auth/login  <https://app.swagger |
-|                                   | hub.com/apis/tremoteye/tremoteyeap     |
-|                                   | i/1.0.0#/Auth/post_api_auth_logi       |
-|                                   | n>`__                                  |
-+-----------------------------------+----------------------------------------+
++------------+----------------------------------------+
+| **POST**   | `/api/auth/login  <https://app.swagger |
+|            | hub.com/apis/tremoteye/tremoteyeap     |
+|            | i/1.0.0#/Auth/post_api_auth_logi       |
+|            | n>`__                                  |
++------------+----------------------------------------+
 
 -  Header
 
@@ -366,11 +366,11 @@ API를 활용한 등록
 회사 정보 등록 API
 ''''''''''''''''''
 
-+-----------------------------------+-----------------------------------------------+
-|  **POST**                         | `api/tre/v1/company <https://app.swaggerhub.c |
-|                                   | om/apis/tremoteye/tremoteyeapi/1.0.0#/Company |
-|                                   | /post_api_tre_v1_comapany>`__                 |
-+-----------------------------------+-----------------------------------------------+
++-------------+-----------------------------------------------+
+|  **POST**   | `api/tre/v1/company <https://app.swaggerhub.c |
+|             | om/apis/tremoteye/tremoteyeapi/1.0.0#/Company |
+|             | /post_api_tre_v1_comapany>`__                 |
++-------------+-----------------------------------------------+
 
 
 -  Header
@@ -518,12 +518,12 @@ COMPANY_ADMIN, DIRECTOR 계정은 관리하고자 하는 차량을 등록할 수
 차량 등록 API
 '''''''''''''
 
-+-----------------------------------+--------------------------------------------+
-| **POST**                          | `/api/tre/v1/vehicle <https://app.swaggerh |
-|                                   | ub.com/apis/tremoteye/tremoteyeapi/        |
-|                                   | 1.0.0#/Vehicle/post_api_tre_v1_ve          |
-|                                   | hicle>`__                                  |
-+-----------------------------------+--------------------------------------------+
++------------+--------------------------------------------+
+| **POST**   | `/api/tre/v1/vehicle <https://app.swaggerh |
+|            | ub.com/apis/tremoteye/tremoteyeapi/        |
+|            | 1.0.0#/Vehicle/post_api_tre_v1_ve          |
+|            | hicle>`__                                  |
++------------+--------------------------------------------+
 
 -  Header
 
@@ -678,11 +678,11 @@ API를 활용한 등록
 센서 등록 API
 '''''''''''''
 
-+-----------------------------------+--------------------------------------------+
-| **POST**                          | `/api/tre/v1/sensor <https://app.swaggerh  |
-|                                   | ub.com/apis/tremoteye/tremoteyeapi/1.0.0#/ |
-|                                   | Sensor/post_api_tre_v1_sensor>`__          |
-+-----------------------------------+--------------------------------------------+
++------------+--------------------------------------------+
+| **POST**   | `/api/tre/v1/sensor <https://app.swaggerh  |
+|            | ub.com/apis/tremoteye/tremoteyeapi/1.0.0#/ |
+|            | Sensor/post_api_tre_v1_sensor>`__          |
++------------+--------------------------------------------+
 
 
 -  Header
@@ -803,12 +803,12 @@ API를 활용한 등록
 디렉터 정보 등록 API
 ''''''''''''''''''''
 
-+-----------------------------------+----------------------------------------------+
-| **POST**                          | `/api/tre/v1/director <https://app.swaggerhub|
-|                                   | .com/apis/tremoteye/tremoteyeapi/            |
-|                                   | 1.0.0#/Director/post_api_tre_v1_d            |
-|                                   | irector>`__                                  |
-+-----------------------------------+----------------------------------------------+
++------------+----------------------------------------------+
+| **POST**   | `/api/tre/v1/director <https://app.swaggerhub|
+|            | .com/apis/tremoteye/tremoteyeapi/            |
+|            | 1.0.0#/Director/post_api_tre_v1_d            |
+|            | irector>`__                                  |
++------------+----------------------------------------------+
 
 
 -  Header
@@ -908,11 +908,11 @@ API를 활용한 등록
 운전자 등록 API
 '''''''''''''''
 
-+-----------------------------------+---------------------------------------------+
-| **POST**                          | `/api/tre/v1/driver <https://app.swaggerhub |
-|                                   | .com/apis/tremoteye/tremoteyeapi/           |
-|                                   | 1.0.0#/Driver/post_api_tre_v1_driver>`__    |
-+-----------------------------------+---------------------------------------------+
++------------+---------------------------------------------+
+| **POST**   | `/api/tre/v1/driver <https://app.swaggerhub |
+|            | .com/apis/tremoteye/tremoteyeapi/           |
+|            | 1.0.0#/Driver/post_api_tre_v1_driver>`__    |
++------------+---------------------------------------------+
 
 -  Header
 
@@ -1023,13 +1023,13 @@ API를 활용한 등록
 위임 후보 회사 등록 API
 '''''''''''''''''''''''
 
-+-----------------------------------+------------------------------------------+
-| **POST**                          | `/api/tre/v1/company/{companyId}/relatio |
-|                                   | n/company <https://app.swaggerhub.com/ap |
-|                                   | is/tremoteye/tremoteyeapi/1.0.0#/Relatio |
-|                                   | n/post_api_tre_v1_company__companyId__re |
-|                                   | lation_company>`__                       |
-+-----------------------------------+------------------------------------------+
++------------+------------------------------------------+
+| **POST**   | `/api/tre/v1/company/{companyId}/relatio |
+|            | n/company <https://app.swaggerhub.com/ap |
+|            | is/tremoteye/tremoteyeapi/1.0.0#/Relatio |
+|            | n/post_api_tre_v1_company__companyId__re |
+|            | lation_company>`__                       |
++------------+------------------------------------------+
 
 -  Header
 
@@ -1098,13 +1098,13 @@ API를 활용한 등록
 위임 후보 회사에 차량 위임 API
 ''''''''''''''''''''''''''''''
 
-+-----------------------------------+------------------------------------+
-| **POST**                          | `/api/tre/v1/director/{directorId} |
-|                                   | /relation/vehicle <https://app.swa |
-|                                   | ggerhub.com/apis/tremoteye/tremote |
-|                                   | yeapi/1.0.0#/Relation/post_api_tre |
-|                                   | _v1_cicle>`__                      |
-+-----------------------------------+------------------------------------+
++------------+------------------------------------+
+| **POST**   | `/api/tre/v1/director/{directorId} |
+|            | /relation/vehicle <https://app.swa |
+|            | ggerhub.com/apis/tremoteye/tremote |
+|            | yeapi/1.0.0#/Relation/post_api_tre |
+|            | _v1_cicle>`__                      |
++------------+------------------------------------+
 
 -  Header
 
@@ -1204,13 +1204,13 @@ Company_Admin, Director 권한 계정은 Director 에게 특정 차량의 권한
 디렉터 정보 등록 API
 ''''''''''''''''''''
 
-+-----------------------------------+-------------------------------------------+
-| **POST**                          | `/api/tre/v1/director/{directorId}        |
-|                                   | /relation/vehicle <https://app.swaggerhub |
-|                                   | .com/apis/tremoteye/tremoteyeapi/         |
-|                                   | 1.0.0#/Relation/post_api_tre_v1_d         |
-|                                   | irector__directorId__relation_vehicle>`__ |
-+-----------------------------------+-------------------------------------------+
++------------+-------------------------------------------+
+| **POST**   | `/api/tre/v1/director/{directorId}        |
+|            | /relation/vehicle <https://app.swaggerhub |
+|            | .com/apis/tremoteye/tremoteyeapi/         |
+|            | 1.0.0#/Relation/post_api_tre_v1_d         |
+|            | irector__directorId__relation_vehicle>`__ |
++------------+-------------------------------------------+
 
 -  Header
 
@@ -1306,13 +1306,13 @@ Director는 본인이 관리하는 차량이거나 본인이 Delegated_director�
 Driver에게 이용 가능한 차량 등록 API
 ''''''''''''''''''''''''''''''''''''
 
-+-----------------------------------+---------------------------------------+
-| **POST**                          | `/api/tre/v1/driver/{driverId}/rel    |
-|                                   | ation/vehicle <https://app.swaggerhub |
-|                                   | .com/apis/tremoteye/tremoteyeapi/     |
-|                                   | 1.0.0#/Relation/post_api_tre_v1_d     |
-|                                   | river__driverId__relation_vehicle>`__ |
-+-----------------------------------+---------------------------------------+
++------------+---------------------------------------+
+| **POST**   | `/api/tre/v1/driver/{driverId}/rel    |
+|            | ation/vehicle <https://app.swaggerhub |
+|            | .com/apis/tremoteye/tremoteyeapi/     |
+|            | 1.0.0#/Relation/post_api_tre_v1_d     |
+|            | river__driverId__relation_vehicle>`__ |
++------------+---------------------------------------+
 
 -  Header
 
@@ -1461,12 +1461,12 @@ Procedure
 
    RPC 요청 API는 아래와 같습니다.
 
-+-----------------------------------+----------------------------------------------+
-| **POST**                          | `/api/plugins/rpc/twoway/{sensorId           |
-|                                   | } <https://app.swaggerhub.com/apis/          |
-|                                   | tremoteye/tremoteyeapi/1.0.0#/Sensor/        |
-|                                   | post_api_plugins_rpc_twoway__sensorId_>`__   |
-+-----------------------------------+----------------------------------------------+
++------------+----------------------------------------------+
+| **POST**   | `/api/plugins/rpc/twoway/{sensorId           |
+|            | } <https://app.swaggerhub.com/apis/          |
+|            | tremoteye/tremoteyeapi/1.0.0#/Sensor/        |
+|            | post_api_plugins_rpc_twoway__sensorId_>`__   |
++------------+----------------------------------------------+
 
 3. 플랫폼은 2번과정에서 수신한 RPC 요청 메세지를 단말에 포워딩 합니다. 이 때, 플랫폼은 RPC에 대한 요청 식별자 Request-ID를 Topic의 하나로 제공합니다.
 
@@ -1546,13 +1546,13 @@ Procedure
 
 5. 차량과 등록된 센서 간 매핑을 요청합니다. 매핑 API는 아래와 같습니다.
 
-+-----------------------------------+------------------------------------------+
-| **POST**                          | `/api/tre/v1/sensor/{sensorId}/veh       |
-|                                   | icle/{vehicleId} <https://app.swaggerhub |
-|                                   | .com/apis/tremoteye/tremoteyeapi/        |
-|                                   | 1.0.0#/Sensor/post_api_tre_v1_sen        |
-|                                   | sor__sensorId__vehicle__vehicleId_>`__   |
-+-----------------------------------+------------------------------------------+
++------------+------------------------------------------+
+| **POST**   | `/api/tre/v1/sensor/{sensorId}/veh       |
+|            | icle/{vehicleId} <https://app.swaggerhub |
+|            | .com/apis/tremoteye/tremoteyeapi/        |
+|            | 1.0.0#/Sensor/post_api_tre_v1_sen        |
+|            | sor__sensorId__vehicle__vehicleId_>`__   |
++------------+------------------------------------------+
 
 6. 플랫폼에서 요청 받은 단말이 Activation이 필요한지 여부를 판단합니다. 단말의 Activation 필요 여부는 플랫폼에 단말을 등록할 때 입력한 activationRequired 필드 값에 따라 구분합니다. activationRequired 값이 true이면 Activation이 필요하다고 간주합니다.
 
@@ -1641,13 +1641,13 @@ MQTTS에서 토픽을 구독하면 필터에 일치하는 토픽에 대한 발�
 
 	client.subscribe("v1/sensors/me/rpc/request/+");
 
-+-----------------------------------+------------------------------------------+
-| **POST**                          | `/api/tre/v1/sensor/{sensorId}/veh       |
-|                                   | icle/{vehicleId} <https://app.swaggerhub |
-|                                   | .com/apis/tremoteye/tremoteyeapi/        |
-|                                   | 1.0.0#/Sensor/post_api_tre_v1_sen        |
-|                                   | sor__sensorId__vehicle__vehicleId_>`__   |
-+-----------------------------------+------------------------------------------+
++------------+------------------------------------------+
+| **POST**   | `/api/tre/v1/sensor/{sensorId}/veh       |
+|            | icle/{vehicleId} <https://app.swaggerhub |
+|            | .com/apis/tremoteye/tremoteyeapi/        |
+|            | 1.0.0#/Sensor/post_api_tre_v1_sen        |
+|            | sor__sensorId__vehicle__vehicleId_>`__   |
++------------+------------------------------------------+
 
 5. 플랫폼에서 요청 받은 단말이 Activation이 필요한지 여부를 판단합니다.
 단말의 Activation 필요 여부는 플랫폼에 단말을 등록할 때 입력한 activationRequired 필드 값에 따라 구분합니다. 
