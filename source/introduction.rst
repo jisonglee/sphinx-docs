@@ -93,4 +93,7 @@ SKT는 커넥티드카 솔루션 및 서비스를 기획하는 파트너들의 �
 
 Smart[Fleet] 플랫폼은 파트너업체들이 커넥티드카 단말의 성능 시험이나 시장에서 경쟁력있는 커넥티드카 서비스 개발을 쉽게 할 수 있도록 Smart[Fleet] 포털 및 REST API 등을 통하여 다양한 기능을 제공합니다.
 
+|br|
+|br|
+
 .. image:: ../images/introduction/3.png
