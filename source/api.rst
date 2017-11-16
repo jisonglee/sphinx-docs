@@ -1,12 +1,24 @@
+.. |br| raw:: html
+
+   <br />
+
 .. _api-specification:
 
 API 규격
 ========
 
+|br|
+|br|
+|br|
+
 REST API
 --------
 
+|br|
+
 Smart[Fleet] 플랫폼의 다음과 같은 REST API를 제공합니다. 상세한 내용은 `Smart[Fleet] REST API Web Document <https://app.swaggerhub.com/apis/tremoteye/tremoteyeapi/1.0.0>`__ 내용을 참고하시기 바랍니다.
+
+.. rst-class:: table-width-fix
 
 +----------+----------------------------------------------------+
 | 구분     | APIs                                               |
@@ -182,10 +194,14 @@ Smart[Fleet] 플랫폼의 다음과 같은 REST API를 제공합니다. 상세�
 |          | -  Driver에게 위임된 차량 리스트 조회              |
 +----------+----------------------------------------------------+
 
-
+|br|
+|br|
+|br|
 
 Entity Model
 -------------
+
+|br|
 
 REST API에서는 다음과 같은 Entity들이 정의되어 있으며, 세부 데이터 모델 내용은 `Smart[Fleet] REST API Web Document <https://app.swaggerhub.com/apis/tremoteye/tremoteyeapi/1.0.0>`__ 내용을 참고하시기 바랍니다.
 
