@@ -24,3 +24,7 @@
 .table-width-full {
   width : 100%;
 }
+
+.text-align-justify {
+	text-align: justify;
+}

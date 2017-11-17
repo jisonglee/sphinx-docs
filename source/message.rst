@@ -7,18 +7,14 @@
 메시지 포맷
 ==============================
 
-|br|
+.. rst-class:: text-align-justify
 
 표에 M/O는 Mandatory/Optional의 약자로, Mandatory는 필수로 포함해야 하는 데이터를 Optional은 필요에 따라 기입이 여부를 개발사에서 판단하시면 됩니다.
 
 |br|
-|br|
-|br|
 
 Device 메시지 포맷
 ----------------------
-
-|br|
 
 .. _payload-types:
 
@@ -27,18 +23,15 @@ Payload Types
 
 .. _microtrip-message-format:
 
-|br|
-|br|
-|br|
-
 Microtrip
 ^^^^^^^^^^^
 
-|br|
+.. rst-class:: text-align-justify
 
 Microtrip 메세지는 차량이 운행을 시작한 후 설정된 주기에 따라 전송하는 차량 운행 상세 데이터입니다.  주기는 각 어플리케이션 마다 상이하므로, 아래의 값은 플랫폼에 전송하는 해당 시점에 데이터를 추출하여 기입합니다.
 
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-------+--------+-----+-----------------------------------------------------------------------------+
 | Key   | Type   | M/O | Description                                                                 |
@@ -128,16 +121,16 @@ Microtrip 메세지는 차량이 운행을 시작한 후 설정된 주기에 따
 
 |br|
 |br|
-|br|
 
 Trip
 ^^^^^^^^
 
-|br|
+.. rst-class:: text-align-justify
 
 Trip Message는 차량이 운행이 종료된 후에 전달하는 메시지입니다.
 
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-------+------+-----+-----------------------------------+-------+
 | Key   | Type | M/O | Description                       | Note  |
@@ -222,16 +215,14 @@ Trip Message는 차량이 운행이 종료된 후에 전달하는 메시지입�
 
 |br|
 |br|
-|br|
 
 Diagnostic Information
 ^^^^^^^^^^^^^^^^^^^^^^
 
-|br|
-
 OBD에서 인지한 차량 진단 코드(DTC)를 전송하는 메시지를 정의합니다.
 
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +------+--------+-----+---------------------------------+
 | Key  | Type   | M/O | Description                     |
@@ -246,6 +237,9 @@ OBD에서 인지한 차량 진단 코드(DTC)를 전송하는 메시지를 정�
 +------+--------+-----+---------------------------------+
 
 .. note::
+
+  .. rst-class:: text-align-justify
+
 	OBD가 플랫폼에 DTC 코드를 전송하는 방식은 2가지
 
 	-  차량 주행이 시작한 후에 감지된 Diagnostic Information을 전송하는 방법
@@ -265,16 +259,16 @@ OBD에서 인지한 차량 진단 코드(DTC)를 전송하는 메시지를 정�
 
 |br|
 |br|
-|br|
 
 Collision warning (Driving)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|br|
+.. rst-class:: text-align-justify
 
 운행 중 OBD가 감지한 차량 접촉 사고에 대한 위치 정보를 전달하는 메세지를 정의합니다.
 
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-------+------+-----+------------------------------+
 | Key   | Type | M/O | Description                  |
@@ -298,16 +292,16 @@ Collision warning (Driving)
 
 |br|
 |br|
-|br|
 
 Collision warning (Paramsking)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|br|
+.. rst-class:: text-align-justify
 
 주차 중 OBD가 감지한 차량 접촉 사고에 대한 위치 정보를 전달하는 메세지를 정의합니다.
 
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +------+------+-----+-------------+
 | Key  | Type | M/O | Description |
@@ -328,16 +322,16 @@ Collision warning (Paramsking)
 
 |br|
 |br|
-|br|
 
 Battery Warning
 ^^^^^^^^^^^^^^^
 
-|br|
+.. rst-class:: text-align-justify
 
 차량 배터리 소모에 대한 위험 알림 메시지를 정의합니다.
 
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-----+------+-----+-------------+
 | Key | Type | M/O | Description |
@@ -355,16 +349,16 @@ Battery Warning
 
 |br|
 |br|
-|br|
 
 Unplugged Warning
 ^^^^^^^^^^^^^^^^^
 
-|br|
+.. rst-class:: text-align-justify
 
 OBD가 차량으로부터 탈착되는 이벤트에 대한 알림 메시지를 정의합니다.
 
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +------+------+-----+-------------+
 | Key  | Type | M/O | Description |
@@ -385,16 +379,16 @@ OBD가 차량으로부터 탈착되는 이벤트에 대한 알림 메시지를 �
 
 |br|
 |br|
-|br|
 
 Turn-off Warning
 ^^^^^^^^^^^^^^^^
 
-|br|
+.. rst-class:: text-align-justify
 
 OBD가 종료된 경우, 종료 이전에 종료에 대한 이유를 플랫폼에 전달하기 위한 알림 매시지를 정의합니다.
 
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-----+--------+-----+----------------+
 | Key | Type   | M/O | Description    |
@@ -412,38 +406,30 @@ OBD가 종료된 경우, 종료 이전에 종료에 대한 이유를 플랫폼�
 
 |br|
 |br|
-|br|
 
 .. _rpc-message-format:
 
 RPC 메시지 포맷
 -----------------
 
-|br|
+.. rst-class:: text-align-justify
 
 OBD 단말을 제어하기 위한 RPC Message Type을 명세합니다. 기술되지 않는 제어는 단말과 어플리케이션 상호 간에만 규약 되어 있다면, Vendor Specific Message를 사용합니다.
 
-|br|
-|br|
 |br|
 
 Vendor Specific Message
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-|br|
+.. rst-class:: text-align-justify
 
 각 단말 업체에서 별도로 관리하는 제어 요청 메시지이며, 다른 제어 메시지도 본 포맷을 확장하여 명시됩니다.
-
-|br|
-|br|
-|br|
 
 Request
 ^^^^^^^
 
-|br|
-
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +--------+--------+-----+-----------------------------------------+
 | Key    | Type   | M/O | Description                             |
@@ -453,16 +439,13 @@ Request
 | params | String | M   | 기능에 대한 파라미터를 명세             |
 +--------+--------+-----+-----------------------------------------+
 
-|br|
-
 .. _vendor-specific-msg-response:
 
 Response
 ^^^^^^^^
 
-|br|
-
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-----------------+-----------------+-----------------+-----------------+
 | Key             | Type            | M/O             | Description     |
@@ -475,16 +458,13 @@ Response
 |                 |                 |                 | 결과 추가       |
 +-----------------+-----------------+-----------------+-----------------+
 
-|br|
-
 .. _vendor-specific-msg-result:
 
 Result
 ^^^^^^
 
-|br|
-
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-----------------+-----------------+-----------------+-----------------+
 | Key             | Type            | M/O             | Description     |
@@ -502,26 +482,20 @@ Result
 
 |br|
 |br|
-|br|
 
 Device Activation
 ~~~~~~~~~~~~~~~~~
 
-|br|
+.. rst-class:: text-align-justify
 
 차량용 센서를 차량에 부착한 후 활성화하기 위해 필요한 RPC 메시지를 명세합니다.
 
 .. _device-activation-request:
 
-|br|
-|br|
-|br|
-
 Request
 ^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +--------+--------+-----+-----------------------------------------------------+
@@ -567,16 +541,13 @@ Request
   	}
   }
 
-|br|
-
 .. _device-activation-response:
 
 Response
 ^^^^^^^^
 
-|br|
-
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-----------------+-----------------+-----------------+-----------------+
 | Key             | Type            | M/O             | Description     |
@@ -597,16 +568,13 @@ Response
   	"result" : 2000
   }
 
-|br|
-
 .. _device-activation-result:
 
 Result
 ^^^^^^
 
-|br|
-
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-----------------+-----------------+-----------------+---------------------------------------------------+
 | Key             | Type            | M/O             | Description                                       |
@@ -634,25 +602,19 @@ Result
 
 |br|
 |br|
-|br|
 
 Firmware Update
 ~~~~~~~~~~~~~~~
 
-|br|
+.. rst-class:: text-align-justify
 
 차량용 OBD의 펌웨어 업데이트를 위한 RPC 메시지를 명세합니다.
-
-|br|
-|br|
-|br|
 
 Request
 ^^^^^^^
 
-|br|
-
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +--------+--------+-----+----------------------------------------------------------+
 | Key    | Type   | M/O | Description                                              |
@@ -680,14 +642,11 @@ Request
   	}
   }
 
-|br|
-
 Response
 ^^^^^^^^
 
-|br|
-
 .. rst-class:: table-width-fix
+.. rst-class:: text-align-justify
 
 +-----------------+-----------------+-----------------+-----------------+
 | Key             | Type            | M/O             | Description     |
@@ -710,24 +669,18 @@ Response
 
 |br|
 |br|
-|br|
 
 OBD Reset
 ~~~~~~~~~
 
-|br|
+.. rst-class:: text-align-justify
 
 차량용 OBD의 재시작을 위한 RPC 메시지
-
-|br|
-|br|
-|br|
 
 Request
 ^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +--------+--------+-----+---------------+
@@ -747,13 +700,10 @@ Request
     "params" : ""
   }
 
-|br|
-
 Response
 ^^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +-----------------+-----------------+-----------------+-----------------+
@@ -775,13 +725,10 @@ Response
     "result" : 2000
   }
 
-|br|
-
 Result
 ^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +-----------------+-----------------+-----------------+-----------------+
@@ -808,22 +755,18 @@ Result
 
 |br|
 |br|
-|br|
 
 Device Serial Number Check
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|br|
+.. rst-class:: text-align-justify
 
 차량용 OBD의 시리얼 번호 확인용 RPC 메시지
-
-|br|
 
 Request
 ^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +--------+--------+-----+----------------+
@@ -843,13 +786,10 @@ Request
     "params" : ""
   }
 
-|br|
-
 Response
 ^^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +-----------------+-----------------+-----------------+-----------------+
@@ -871,13 +811,10 @@ Response
     "result" : 2000
   }
 
-|br|
-
 Result
 ^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +-----------------+-----------------+-----------------+---------------------------------------------------+
@@ -906,24 +843,18 @@ Result
 
 |br|
 |br|
-|br|
 
 Clear Device Data
 ~~~~~~~~~~~~~~~~~
 
-|br|
+.. rst-class:: text-align-justify
 
 차량용 OBD 데이터 삭제
-
-|br|
-|br|
-|br|
 
 Request
 ^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +--------+--------+-----+-------------------+
@@ -943,13 +874,10 @@ Request
     "params" : ""
   }
 
-|br|
-
 Response
 ^^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +-----------------+-----------------+-----------------+-----------------+
@@ -971,12 +899,10 @@ Response
     "result" : 2000
   }
 
-|br|
-
 Result
 ^^^^^^
 
-|br|
+.. rst-class:: text-align-justify
 
 +-----------------+-----------------+-----------------+-----------------+
 | Key             | Type            | M/O             | Description     |
@@ -1001,24 +927,18 @@ Result
 
 |br|
 |br|
-|br|
 
 Firmware Update (Chunk-based)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|br|
+.. rst-class:: text-align-justify
 
 Chunk 기반으로 차량용 OBD의 펌웨어 업데이트를 위한 RPC 메시지를 명세합니다.
-
-|br|
-|br|
-|br|
 
 Request
 ^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +--------+--------+-----+----------------------------------------------+
@@ -1053,13 +973,10 @@ Request
   	}
   }
 
-|br|
-
 Response
 ^^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +-----------------+-----------------+-----------------+-----------------+
@@ -1081,13 +998,10 @@ Response
     "result" : 2000
   }
 
-|br|
-
 Result
 ^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +-----------------+-----------------+-----------------+-----------------+
@@ -1113,18 +1027,14 @@ Result
 
 |br|
 |br|
-|br|
 
 Common Response Code for RPC Result
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|br|
-
 Code Class
 ^^^^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +----------------+------+-----------------------------------------------------+
@@ -1137,13 +1047,10 @@ Code Class
 | Platform Error | 5XXX | RPC 요청에 대해서 플랫폼이 비정상적으로 동작한 경우 |
 +----------------+------+-----------------------------------------------------+
 
-|br|
-
 Successful Response Class
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +------+----------------------------+
@@ -1154,13 +1061,10 @@ Successful Response Class
 | 2001 | RPC 메시지 정상적으로 수신 |
 +------+----------------------------+
 
-|br|
-
 Sensor Error Response Class
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|br|
-
+.. rst-class:: text-align-justify
 .. rst-class:: table-width-fix
 
 +------+-------------------------------------------+
@@ -1174,3 +1078,6 @@ Sensor Error Response Class
 +------+-------------------------------------------+
 | 4003 | 동일한 RPC 중복 수신                      |
 +------+-------------------------------------------+
+
+|br|
+|br|

@@ -2,15 +2,13 @@
 
    <br />
 
-
 주요 구성요소 (Entity Architecture)
 =======================================
 
-|br|
+.. rst-class:: text-align-justify
 
 Smart[Fleet] 플랫폼은 커넥티드카 서비스 특성에 맞도록 설계된 유연한 데이터 구조를 지원합니다.
 
-|br|
 |br|
 
 .. image:: ../images/architecture/1.png
@@ -19,15 +17,13 @@ Smart[Fleet] 플랫폼은 커넥티드카 서비스 특성에 맞도록 설계�
 
 |br|
 |br|
-|br|
 
 기본 구성요소 (Basic Entity)
 -------------------------------
 
-|br|
-
 .. rst-class:: table-width-fix
 .. rst-class:: table-width-fix-first
+.. rst-class:: text-align-justify
 
 +-----------------------+----------------------------------------------------------------------------------------------------------------+
 | 구분                  | 설명                                                                                                           |
@@ -74,17 +70,17 @@ Smart[Fleet] 플랫폼은 커넥티드카 서비스 특성에 맞도록 설계�
 
 |br|
 |br|
-|br|
 
 부가 구성요소
 ---------------------------
 
-|br|
+.. rst-class:: text-align-justify
 
 각 구성요소는 차량을 기준으로 Owner(Company)와 Delegated Owner(Delegated company)로 구분되며, 본 절에서는 Delegated owner 구성요소에 대해서 설명합니다.
 
 .. rst-class:: table-width-fix
 .. rst-class:: table-width-fix-first
+.. rst-class:: text-align-justify
 
 +-----------------------+----------------------------------------------------------------------------------------------------------------+
 | 구성요소              | 개요                                                                                                           |
@@ -105,8 +101,12 @@ Smart[Fleet] 플랫폼은 커넥티드카 서비스 특성에 맞도록 설계�
 |                       | * 운행이 종료된 후에는 다른 Driver의 운행이 가능하도록 로그아웃한다.                                           |
 +-----------------------+----------------------------------------------------------------------------------------------------------------+
 
+|br|
+
 .. note::
 	부가 구성요소(Delegated Entity)가 적용되는 시나리오 예시 :
+
+  .. rst-class:: text-align-justify
 
 	1. 'SK화재'(owner company)가 관리하는 차량 V1에 사고가 발생하여 '김출동'(Director)이 현장 출동
 	2. '김출동'(Director)은 운전자'홍길동'(Driver)에게 차량을 인계받아 해당 차량 수리 의뢰를 위해서 'SK화재' 위탁 수리업체인 '영진카센터'(Delegated company)로 차량 공유 요청함
@@ -115,3 +115,6 @@ Smart[Fleet] 플랫폼은 커넥티드카 서비스 특성에 맞도록 설계�
 	5. 수리가 완료되고 차량을 운전자 '홍길동'에게 인계하기 위해 '차배달'(Delegated Driver)에게 차량을 인도함
 	6. '차배달'(Delegated Driver)은 운전자 '홍길동'(Driver)에게 차량을 전달하고 전달 확인증을 '김출동'(Direcotr)에게 제출
 	7. '김출동'(Director)은 ‘SK화재’에 요청하여 차량 V1에 대한 '영진카센터'와의 공유를 종료
+
+|br|
+|br|
