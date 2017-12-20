@@ -15,7 +15,7 @@ Smart[Fleet] 파트너 구축 가이드
 +---------+--------------------+
 | Version | Last modified date |
 +=========+====================+
-| 1.0     | 2017/11/17         |
+| 1.0     | 2017/11/28         |
 +---------+--------------------+
 
 |br|
@@ -29,6 +29,8 @@ Contents:
    introduction
    architecture
    procedure
+   entity
+   device
    api
    sdk
    message
