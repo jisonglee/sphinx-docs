@@ -25,7 +25,7 @@ Smart[Fleet] 플랫폼의 기본 메시지 구조는 ``Header`` 와 ``Payload`` 
 
 :underline:`Example Code` :
 
-.. code-block::
+.. code-block:: json
 
     {
         "ts" : 1505434907995,
