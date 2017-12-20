@@ -26,11 +26,11 @@ GitHub : `https://github.com/skt-smartfleet/device-simulator-c <https://github.c
 사용 방법 및 제공 라이브러리
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. rst-class:: text-align-justify
+
 본 시뮬레이터는 SKT의 Smart[Fleet] 플랫폼 프로토콜을 따르는 GPS, OBD 단말의 동작을 나타내는 시뮬레이터입니다.
 Smart[Fleet] 플랫폼의 `기술문서 <http://smart-fleet-docs.readthedocs.io/ko/latest/>`__ 를 기반으로 구성되어 있습니다.
-해당 시뮬레이터에 대한 사용 방법과 제공 라이브러리에 대한 설명은 아래 링크를 방문하시기 바랍니다.
-
-https://github.com/skt-smartfleet/device-simulator-c/blob/master/README.md
+사용 방법과 제공 라이브러리에 대한 설명은 `README.md <https://github.com/skt-smartfleet/device-simulator-c/blob/master/README.md>`__ 를 참조하시기 바랍니다.
 
 |br|
 |br|
@@ -50,11 +50,11 @@ GitHub : `https://github.com/skt-smartfleet/device-sdk-android <https://github.c
 사용 방법 및 제공 라이브러리
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SKT의 Smart[Fleet] 플랫폼 프로토콜을 따르는 GPS, OBD 단말의 동작을 나타내는 Android SDK입니다.
-Smart[Fleet] 플랫폼의 `기술문서 <http://smart-fleet-docs.readthedocs.io/ko/latest/>`__ 를 기반으로 구성되어 있습니다.
-해당 SDK에 대한 사용 방법과 제공 라이브러리에 대한 설명은 아래 링크를 방문하시기 바랍니다.
+.. rst-class:: text-align-justify
 
-https://github.com/skt-smartfleet/device-sdk-android/blob/master/README.md
+SKT의 Smart[Fleet] 플랫폼 프로토콜을 따르는 단말의 동작을 나타내는 Android SDK입니다.
+Smart[Fleet] 플랫폼의 `기술문서 <http://smart-fleet-docs.readthedocs.io/ko/latest/>`__ 를 기반으로 구성되어 있습니다.
+사용 방법과 제공 라이브러리에 대한 설명은 `README.md <https://github.com/skt-smartfleet/device-sdk-android/blob/master/README.md>`__ 를 참조하시기 바랍니다.
 
 |br|
 |br|
@@ -74,11 +74,11 @@ GitHub : `https://github.com/skt-smartfleet/device-sdk-ios <https://github.com/s
 사용 방법 및 제공 라이브러리
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SKT의 Smart[Fleet] 플랫폼 프로토콜을 따르는 GPS, OBD 단말의 동작을 나타내는 iOS SDK입니다.
-Smart[Fleet] 플랫폼의 `기술문서 <http://smart-fleet-docs.readthedocs.io/ko/latest/>`__ 를 기반으로 구성되어 있습니다.
-해당 SDK에 대한 사용 방법과 제공 라이브러리에 대한 설명은 아래 링크를 방문하시기 바랍니다.
+.. rst-class:: text-align-justify
 
-https://github.com/skt-smartfleet/device-sdk-ios/blob/master/README.md
+SKT의 Smart[Fleet] 플랫폼 프로토콜을 따르는 단말의 동작을 나타내는 iOS SDK입니다.
+Smart[Fleet] 플랫폼의 `기술문서 <http://smart-fleet-docs.readthedocs.io/ko/latest/>`__ 를 기반으로 구성되어 있습니다.
+사용 방법과 제공 라이브러리에 대한 설명은 `README.md <https://github.com/skt-smartfleet/device-sdk-ios/blob/master/README.md>`__ 를 참조하시기 바랍니다.
 
 |br|
 |br|
@@ -96,9 +96,11 @@ GitHub : `https://github.com/skt-smartfleet/device-sdk-java <https://github.com/
 사용 방법 및 제공 라이브러리
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SKT의 Smart[Fleet] 플랫폼 프로토콜을 따르는 GPS, OBD 단말의 동작을 나타내는 JAVA SDK입니다.
+.. rst-class:: text-align-justify
+
+SKT의 Smart[Fleet] 플랫폼 프로토콜을 따르는 단말의 동작을 나타내는 JAVA SDK입니다.
 Smart[Fleet] 플랫폼의 `기술문서 <http://smart-fleet-docs.readthedocs.io/ko/latest/>`__ 를 기반으로 구성되어 있습니다.
-해당 SDK에 대한 사용 방법과 제공 라이브러리에 대한 설명은 `해당 문서 <https://github.com/skt-smartfleet/device-sdk-java/blob/master/README.md>`__ 를 참조하시기 바랍니다.
+사용 방법과 제공 라이브러리에 대한 설명은 `README.md <https://github.com/skt-smartfleet/device-sdk-java/blob/master/README.md>`__ 를 참조하시기 바랍니다.
 
 .. rst-class:: text-align-justify
 
